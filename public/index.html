@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <header class="header">
+            <div class="brand">
+                <span class="brand-icon">☀️</span>
+                <span>WeatherService</span>
+            </div>
+
+            <span class="api-label">WEATHER DASHBOARD</span>
+        </header>
+
+        <section class="intro">
+            <p class="eyebrow">WEATHER AT A GLANCE</p>
+            <h1>Check the weather.</h1>
+            <p class="subtitle">
+                Get current weather conditions and forecasts for your city.
+            </p>
+        </section>
+
+        <section class="search-section">
+
+            <form id="searchForm">
+
+                <div class="search-input">
+                    <span>📍</span>
+
+                    <input
+                        type="text"
+                        id="cityInput"
+                        name="city"
+                        placeholder="Enter a city name..."
+                        value="Minna"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="searchButton">
+                    Search Weather
+                </button>
+
+            </form>
+
+            <p id="statusMessage" class="status-message" aria-live="polite">
+                Search for a city to see its weather.
+            </p>
+
+        </section>
+
+        <section class="weather-card">
+
+            <div class="card-heading">
+                <h2>Current Weather</h2>
+                <span class="live-label">CURRENT CONDITIONS</span>
+            </div>
+
+            <div class="current-weather">
+
+                <div class="weather-information">
+
+                    <p class="city-name" id="currentCity">
+                        Waiting for search...
+                    </p>
+
+                    <div class="temperature">
+                        <span id="temperature">--</span>
+                        <span class="degree">°C</span>
+                    </div>
+
+                    <p class="condition" id="condition">
+                        Weather condition
+                    </p>
+
+                    <p class="description" id="description">
+                        Search to retrieve weather information.
+                    </p>
+
+                </div>
+
+                <div class="weather-icon" id="weatherIcon">
+                    🌤️
+                </div>
+
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail-item">
+                    <span>🌡️</span>
+                    <div>
+                        <p>Feels Like</p>
+                        <strong id="feelsLike">--°C</strong>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span>💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span>💨</span>
+                    <div>
+                        <p>Wind Speed</p>
+                        <strong id="windSpeed">-- km/h</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="forecast-section">
+
+            <div class="forecast-heading">
+                <div>
+                    <p class="eyebrow">PLAN AHEAD</p>
+                    <h2>Weather Forecast</h2>
+                </div>
+
+                <span class="forecast-label">UPCOMING DAYS</span>
+            </div>
+
+            <div id="forecastContainer" class="forecast-container">
+
+                <div class="forecast-placeholder">
+                    Forecast information will appear here after your search.
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>WeatherService · Powered by a weather API</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
